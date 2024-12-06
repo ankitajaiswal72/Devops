@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+
+image:
+  backend:
+    repository: shreybatra/sample-backend
+    tag: "latest"
+    frontend:
+      repository: shreybatra/sample-frontend
+      tag: "latest"
+      redis:
+        repository: redis
+        tag: "latest"
+
+        env:
+          redisUri: redis://redis-svc:6379
+          backendUrl: http://backend-svc:8000
+image:
+  backend:
+    repository: shreybatra/sample-backend
+    tag: "latest"
+    frontend:
+      repository: shreybatra/sample-frontend
+      tag: "latest"
+      redis:
+        repository: redis
+        tag: "latest"
+
